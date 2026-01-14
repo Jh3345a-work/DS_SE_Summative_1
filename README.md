@@ -9,7 +9,7 @@ Propose a new prdouct for your employer or a small-scale side proejct for yourse
 - (b) A data product, for example, a Jupyter notebook with data visualisations that collect data from a web API or an online SQL database.
 
 ## Design and Prototype
-Design and prototype using Figma or an alternative.
+The link to the prototype NOMIS Population Estimates App can be found [here](https://www.figma.com/proto/mkHJsps61uHcKIPIVSwEMh/SE_Summative_1?node-id=0-1&t=jPzamB5Tra5ZRfd9-1)
 
 ## Plan
 Plan your project using modern planning techinques (Agile with sprints). Use project management tool (GitHub Projects). Add a dedication section to your README that shows how you have used your project management tools.
