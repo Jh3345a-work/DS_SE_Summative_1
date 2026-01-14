@@ -8,7 +8,12 @@ This product has been selected as NOMIS is beginning to be utilised by my workpl
 
 
 ## Design and Prototype
-The link to the prototype NOMIS Population Estimates App can be found [here](https://www.figma.com/proto/mkHJsps61uHcKIPIVSwEMh/SE_Summative_1?node-id=0-1&t=jPzamB5Tra5ZRfd9-1)
+The NOMIS Population Estimates prototype is available [here]( https://www.figma.com/design/mkHJsps61uHcKIPIVSwEMh/SE_Summative_1?node-id=3-252&t=jPzamB5Tra5ZRfd9-1). 
+
+This design uses four separate frames for the Landing Page, Bar Chart, Pie Chart, and Percentage Change Chart. These pages use an embedded PNG file exported from  the Jupyter notebook, including the 2023 Regional Breakdown bar chart, 2024 Regional Breakdown pie chart, and percentage point change in population share from 2023 to 2024. A consistent image of my organisation’s logo appears on every frame to reflect the intended product branding. Additionally, each of the buttons within the prototype are wired to allow the user to click through the fully functional prototype.
+The design of this prototype also utilised user feedback. After the initial design had been created, a google form containing questions around key design features was distributed to the 5 other members within my team. The resulting changes included a reordering of the Landing page buttons into a vertical stack, rather than horizontal. A rework of the “% Change Chart” name to “Percentage Chart Chart” was also introduced, and a visible button to export each page to a PNG file was also included. This contribution helped to integrate user feedback and improved the overall prototype by aligning the prototype more closely with stakeholder expectations, and make the application more user-friendly.
+
+An example of the google form can be found [here]( https://forms.gle/bS94FHrxhvVtbxLJA).
 
 
 ## Plan
