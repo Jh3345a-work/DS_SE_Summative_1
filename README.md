@@ -43,8 +43,47 @@ Use Test Driven Development to produce some of the codebase for your product and
 Use GitHub or an alternative to add features to your MVP or prototype gradually.
 
 
-## Document
-Document your MVP with both user and technical documentation. The user documentation should guide end users on how to use your app, while the technical documentation should explain the code, how to run the application locally, and how to conduct tests.
+## User Documentation
+This section of the project will explain how a user may replicate the Streamlit app to deploy it locally.
+
+### Prerequisities
+- Python 3.12.10
+- Pip 25.3
+  
+Verify versions:
+```python
+python --version
+pip --version
+```
+
+### Clone the Repository
+Clone the repo using the **Code** button at the top of this repository or run:
+```python
+git clone https://github.com/Jh3345a-work/DS_SE_Summative_1.git
+```
+
+### Install Dependencies
+Install all required packages from requirements.txt:
+```python
+pip install -r requirements.txt
+```
+
+### Run the Streamlit App
+To start the app locally:
+```python
+streamlit run streamlit_app.py
+```
+Streamlit will then automatically launch on your browser locally.
+
+### Alternative: Deploy on Streamlit Cloud
+Deploy on Streamlit Cloud [here](https://share.streamlit.io/?utm_source=streamlit&utm_medium=referral&utm_campaign=main&utm_content=-ss-streamlit-io-topright) and use the button in the top right of the screen, using the details from this repository.
+
+### Testing
+This project also include unit tests to ensure correct functionality. To run the tests:
+```python
+pytest -vv
+```
+This will run the each of the tests with a verbose output.
 
 
 ## Maintain
