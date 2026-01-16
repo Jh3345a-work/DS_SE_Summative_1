@@ -165,7 +165,7 @@ if __name__ == "__main__":
     # This produces the Header Row (logo + title).
     col_logo, col_title = st.columns([1, 12])   # Adjust rations to change column widths.
     with col_logo:
-        st.image("Images/DfE.jpg", width=120)   # Adjust to set logo width for alignment.
+        st.image("images/DfE.jpg", width=120)   # Adjust to set logo width for alignment.
     with col_title:
         st.title("NOMIS Population Estimates – Data Visualisation App")
         st.caption("Source: NOMIS API | Ages 16–64 | Measure: Absolute Value | Gender: Total")
@@ -207,3 +207,4 @@ if __name__ == "__main__":
         left, mid, right = st.columns([1, 2, 1]) 
         with mid:
             st.pyplot(fig_population_share_change(filtered_df_23, filtered_df_24), use_container_width=True)
+
