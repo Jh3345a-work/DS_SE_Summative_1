@@ -2,7 +2,7 @@
 This repository contains all the files and information relevant to my Summative 1 assignment for the Software Engineering module.
 
 ## Project Proposal
-The proposal for this project is to create a useful data product. Specifically, this product will use a python file, which connects to the Office for National Statistics (ONS) NOMIS web API to collect UK regional population estimates, and convert this data into three standardised, publication ready charts to be deployed onto Streamlit as an online application. 
+The proposal for this project is to create a useful data product. Specifically, this product will use a Python file, which connects to the Office for National Statistics (ONS) NOMIS web API to collect UK regional population estimates, and convert this data into three standardised, publication ready charts to be deployed onto Streamlit as an online application. 
 
 The charts selected to be included in this product will be a bar chart displaying the population of each region within the United Kingdom using data from 2023, a pie chart displaying the population breakdown of each region in 2024, and a second bar chart highlighting the percentage change in each region between 2023 and 2024.
 
@@ -43,7 +43,7 @@ By the end of the project, I was far more experienced using GitHub to record my 
 
 
 ## Build
-The development of the final app was iterative and evolved over time. Initially, I designed the app to run off a python Jupyter notebook. This can be found in the archive folder under `Summative_1_notebook.ipynb`. The first development was the creation of the NOMIS population estimates API function `fetch_population_data`. This was specifically designed to extract data for a defined year, as an absolute value rather than percentage, for combined gender, and individuals ages 16-64. These parameters were selected to mirror similar analysis to those within my workplace.
+The development of the final app was iterative and evolved over time. Initially, I designed the app to run off a Python Jupyter notebook. This can be found in the archive folder under `Summative_1_notebook.ipynb`. The first development was the creation of the NOMIS population estimates API function `fetch_population_data`. This was specifically designed to extract data for a defined year, as an absolute value rather than percentage, for combined gender, and individuals ages 16-64. These parameters were selected to mirror similar analysis to those within my workplace.
 
 Once the data collection was working, I developed the `filter_population_df` function to filter and clean the extracted data into only that which would be needed for the data visualisations. This produced two useful dataframes “filtered_df_23” and “filtered_df_24”, which were ready to be used within a visual.
 
@@ -54,7 +54,7 @@ Three matplotlib visualisation functions were then created, and included:
 
 After each of my functions had been created and successfully ran, I created a prototype application using Tkinter. The code for this can be found within the `test_app.ipynb` within the archive folder. However, this app did not leave the prototype stage as I deemed it unsuitable and instead pivoted towards the creation of a deployed Streamlit app. This had several benefits, such as allowing a user to view the visuals using a web browser and was more closely related to software development than the original Jupyter notebook. 
 
-To produce this app, I transferred my code from the Jupyter notebook to a python file, which is the format required for deployment on Streamlit. I researched Streamlit best practices and made several improvements to ensure the app behaved correctly when re-run, could be unit tested, and was easier to maintain. These improvements included adding the “if__name__==”__main__” block which allowed me to unit test functions without running the entire file. Additionally, I improved error handling, which was minimal in the initial notebook, as well as introduced hints and docstring improvements to give functions clear and information definitions, to improve readability if the code grew more complex. Additionally, I was also implemented improved UI and UX features, such as creating a distinct tab for each visual, and centred each visual on the screen, to make the app more practical and visually appealing to the user.
+To produce this app, I transferred my code from the Jupyter notebook to a Python file, which is the format required for deployment on Streamlit. I researched Streamlit best practices and made several improvements to ensure the app behaved correctly when re-run, could be unit tested, and was easier to maintain. These improvements included adding the “if__name__==”__main__” block which allowed me to unit test functions without running the entire file. Additionally, I improved error handling, which was minimal in the initial notebook, as well as introduced hints and docstring improvements to give functions clear and information definitions, to improve readability if the code grew more complex. Additionally, I was also implemented improved UI and UX features, such as creating a distinct tab for each visual, and centred each visual on the screen, to make the app more practical and visually appealing to the user.
 
 The final data product can be viewed either be downloaded and run locally (See User Documentation below), or as a deployed Streamlit app [here](https://dssesummative1-hgkh2w98wq8w2go2caj46u.streamlit.app/).
 
@@ -120,6 +120,21 @@ pytest -vv
 This will run the each of the tests with a verbose output.
 
 ## Technical Documentation
+
+### Overview
+The application is built using the Streamlit Python framework, which executes the entire Python script in a reactive web interface.
+
+### Architecture
+The app follows a modular design that separates data retrieval, processing, and visualisation, making it easy to maintain and expand. The architecture consist of three layers:
+-	Data Access Layer - Contains the `fetch_population_data()` function which communicates with the NOMIS API.
+-	Data Processing Layer - Cleans and standardises the datasets.
+-	Visualisation and UI Layer - Creates the three data visualisations and establishes the Streamlit interface.
+
+### Empathy Map
+A user empathy map created for this project can be found [here]( https://www.figma.com/board/W08TdmSEIIq4gEhiTyCZyA/Empathy-Map--Copy-?node-id=0-1&t=9npFydhBWXz95Whz-1).
+
+### Docstrings and Comments
+Further information on the purpose of each function can be found in the relevant function docstring. Additionally, inline code comments provide additional clarification to support maintainability and understanding.
 
 ## Evaluation
 Evaluate your product in a dedicated "Evaluation" section of your README.
