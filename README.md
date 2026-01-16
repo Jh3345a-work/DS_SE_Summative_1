@@ -35,9 +35,21 @@ Build a minimal viable product (MVP) or prototype step by step, and have a dedic
 
 The final data product can be viewed either be downloaded and run locally (See User Documentation below), or as a deployed Streamlit app [here](https://dssesummative1-hgkh2w98wq8w2go2caj46u.streamlit.app/).
 
-## TDD
-Use Test Driven Development to produce some of the codebase for your product and set up CI/CD (for example, GitHub Actions).
+## Test Driven Development
+Test-driven development was incorporated throughout this project. All tests are located within the `test_functions.py` file within the testing folder. The testing process began with a simple smoke test to verify that pytest was configured correctly. After this, I created a mock test for the `fetch_population_data`, which retrieves population estimates data using the NOMIS API. This mock test used a predefined CSV text to simulate an API response. This test incorporated test-driven development as it was initially created before the API function was fully developed and was expected to fail. To demonstrate this function, the mock CSV intentionally included the value “North East”, while the assertion checked for “Wales”. This mismatch produced a failure, confirming that the function was not yet complete. Once the function was implemented and the expected value was correct, the test passed, demonstrating successful development under the TDD approach. A screenshot of this mock test can be seen below.
 
+![mock API test Screenshot](Images/mockpytest.png)
+
+In addition to the main API test, I also implemented several unit tests for the other functions within the `streamlit_app.py` file. This included:
+-	A check to see if the `filter_population_df` function correctly transforms the raw NOMIS dataset into a cleaned and standardised format, ready for visualisation.
+-	A check for the three chart-generation functions of `test_fig_population_by_region`, `test_fig_pie_population`, and `test_fig_population_share_change`. This aimed to see if each correctly produced a valid Matplotlib figure, to ensure that all visualisation logic worked with predefined data.
+Once the the streamlit_app had been fully integrated and pushed to Github, each of the tests ran successfully. A screenshot of these tests can be found below.
+
+![mock API test Screenshot](Images/pytest.png)
+
+Once all my tests have been completed and pushed to GitHub, I created a Continuous Integration / Continuous Deployment (CI/CD) pipeline using Github actions to automate the testing process for future iterations. This pipeline runs the full test file every time new code is committed, or a pull request is made, ensuring that any new additions to the codebase do not break existing functionality. A screenshot of a successful CI/CD pipeline run using GitHub actions can be seen below.
+
+![mock API test Screenshot](Images/CICD.png)
 
 ## Iterative Development
 Use GitHub or an alternative to add features to your MVP or prototype gradually.
