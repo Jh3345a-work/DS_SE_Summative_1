@@ -23,12 +23,23 @@ An example of the google form used to collect user feedback can be found [here](
 
 
 ## Plan
-Plan your project using modern planning techinques (Agile with sprints). Use project management tool (GitHub Projects). Add a dedication section to your README that shows how you have used your project management tools.
+This section outlines the planning approach used throughout the project. The Agile method was selected as the full set of requirements was not fully defined at the outset. Instead, the initial goal was to retrieve population data from the NOMIS API, create several data visualisations, and deploy them within an app. Using the Agile method benefitted me during this project as I was able to pivot from creating a Tkinter app to deploying an online Streamlit app, when it became more suitable.
 
+Once I had decided on the project method, I created a new GitHub project to manage and record all my issues. Specifically, I chose to use a Kanban board to track the progression of every issue and pull request. The columns utilised the most included the Backlog, In Progress, and Done columns. The In Review column was retained in the project but was not used as I was the only developer in this project. In future, if I was to work collaboratively with a colleague in similar software development, this section would house latest developments prior to final sign-off.
 
-## Capture
-Capture the requirements for your project as issues (aka tickets) accessible via your chosen project management tool.
+An example of the Kanban board used can be found below, clearly demonstrating the tasks/issues which remain untouched in the backlog, the issue currently being worked on as in progress, and the stack of issues which are now closed and completed. An additional benefit of utilising GitHub projects is the ability to mark the priority, estimated size, and sprint of each individual issue which can also be seen in the screenshot. The following screenshot then shows the progression of this documentation ticket once it hd been completed.
 
+![kanban board](Images/kanban.png)
+
+![kanban board progression](Images/kanbanprogression.png)
+
+As I was following Agile methodology, I split my project into several individual sprints. Sprint 1 covered issues such as “Create Project Proposal” and “Design Figma Prototype” which were tasks which could be picked up early in the project. Future sprints often then build on and enhanced work committed in earlier sprints, such as the “Create Data Visualisations” from Sprint 3 which built on the work committed by “Create Filtered Dataframe Function” from Sprint 2. By doing this, the work was developed iteratively in smaller sections, rather than in a handful of commits involving significant levels of code. This made testing and successful implementation easier. 
+
+In addition to the Kanban board, I also heavily utilised the Roadmap tab within Github projects. This helped me visualise exactly which tasks fell into which sprint, and the specific days in which I aimed to complete each specific task to stay on track. A screenshot of the roadmap demonstrating distinct sprints can be seen below.
+
+![roadmap](Images/roadmap.png)
+
+By the end of the project, I was far more experienced using GitHub to record my developments and progress. This is reflected in the renaming, expanding or merging of old commits and issues, which evolved into more comprehensive and substantial items that better represented meaningful development work.
 
 ## Build
 Build a minimal viable product (MVP) or prototype step by step, and have a dedicated section in the README that narrates the process.
@@ -45,11 +56,11 @@ In addition to the main API test, I also implemented several unit tests for the 
 -	A check for the three chart-generation functions of `test_fig_population_by_region`, `test_fig_pie_population`, and `test_fig_population_share_change`. This aimed to see if each correctly produced a valid Matplotlib figure, to ensure that all visualisation logic worked with predefined data.
 Once the the streamlit_app had been fully integrated and pushed to Github, each of the tests ran successfully. A screenshot of these tests can be found below.
 
-![mock API test Screenshot](Images/pytest.png)
+![pytests](Images/pytest.png)
 
 Once all my tests have been completed and pushed to GitHub, I created a Continuous Integration / Continuous Deployment (CI/CD) pipeline using Github actions to automate the testing process for future iterations. This pipeline runs the full test file every time new code is committed, or a pull request is made, ensuring that any new additions to the codebase do not break existing functionality. A screenshot of a successful CI/CD pipeline run using GitHub actions can be seen below.
 
-![mock API test Screenshot](Images/CICD.png)
+![CICD example](Images/CICD.png)
 
 ## Iterative Development
 Use GitHub or an alternative to add features to your MVP or prototype gradually.
